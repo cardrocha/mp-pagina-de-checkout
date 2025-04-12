@@ -1,9 +1,9 @@
-import Image from "next/image";
+import { CheckoutPage } from "./components/CheckoutPage";
 
 export default function Home() {
   return (
-    <div>
-      <p>Hello World</p>
-    </div>
+    <main className="bg-gray-300 min-h-dvh">
+      <CheckoutPage />
+    </main>
   );
 }
