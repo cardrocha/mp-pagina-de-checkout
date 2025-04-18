@@ -12,11 +12,13 @@ export function CheckoutPage() {
 
   return (
     <div className="flex items-start min-h-dvh justify-center gap-4.5 p-14 ronded">
-      <div className="bg-white p-6">
-        <h1 className="text-2xl font-bold">Finalizar Compra</h1>
-        <p className="text-sm text-gray-500">
-          Escolha seu método de pagamento preferido
-        </p>
+      <div className="flex flex-col gap-6 bg-white p-6">
+        <div className="flex flex-col gap-1">
+          <h1 className="text-2xl font-bold">Finalizar Compra</h1>
+          <p className="text-sm text-gray-500">
+            Escolha seu método de pagamento preferido
+          </p>
+        </div>
         <div className="flex items-center gap-1 bg-gray-200 py-0.5 px-px">
           <Button
             isActive={selectedMethod === "cartao"}
@@ -61,7 +63,7 @@ export function CheckoutPage() {
             Pix
           </Button>
         </div>
-        <div className="mt-4">
+        <div>
           {selectedMethod === "cartao" && <MethodCard />}
           {selectedMethod === "boleto" && <MethodTicket />}
           {selectedMethod === "pix" && <MethodPix />}
